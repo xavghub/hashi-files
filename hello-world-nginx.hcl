@@ -57,7 +57,7 @@ EOH
         "traefik.enable=true",
         "traefik.http.routers.helloworldnginx.rule=Path(`/hello-nginx`)", # all resquests coming in with path /hello-nginx associate to this nomad job
         "traefik.http.middlewares.helloworldnginx-strip.stripprefix.prefixes=/hello-nginx", # remove the /hello-nginx path as the webpage is server by "/" path
-    		"traefik.http.routers.helloworldnginx.middlewares=helloworldnginx-strip" # add a url path-strip to the router of the nomad job  
+    	"traefik.http.routers.helloworldnginx.middlewares=helloworldnginx-strip" # add a url path-strip to the router of the nomad job  
       ]
 
       check {
@@ -67,6 +67,6 @@ EOH
         timeout  = "2s"
       }
     }
-      }
-  	}
+	}
+  }
 }
